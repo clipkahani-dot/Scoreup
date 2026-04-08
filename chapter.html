@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Detail - ScoreUp</title>
+    <meta name="description" content="ScoreUp - Bihar Board chapter-wise Important Questions, PYQs and accurate subjective answers.">
+    <meta name="keywords" content="Bihar Board, BSEB, Chapter Questions, PYQ, Subjective Answers, ScoreUp">
+    <meta property="og:title" content="Chapter Detail - ScoreUp">
+    <meta property="og:description" content="Study Important Questions, PYQs and notes for Bihar Board chapters.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .breadcrumb { margin-bottom: 2rem; color: #64748b; font-size: 0.95rem; font-weight: 500; overflow-wrap: break-word; }
+        .breadcrumb a { color: var(--primary-color); text-decoration: none; transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--accent-color); }
+        .content-section {
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(16px); border: 1px solid var(--border-color);
+            border-radius: 20px; padding: 2.5rem; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm);
+            overflow-wrap: break-word;
+        }
+        .content-section h3 {
+            color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.75rem; font-size: 1.6rem; font-weight: 800;
+        }
+        .accordion-item {
+            border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 1.25rem;
+            overflow: hidden; background: #ffffff; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .accordion-item:hover { border-color: #bfdbfe; box-shadow: var(--shadow-md); transform: translateY(-3px) scale(1.01); }
+        .accordion-header {
+            padding: 1.25rem 1.5rem; background: #f8fafc; cursor: pointer; font-weight: 600; color: #1e293b;
+            display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: all 0.3s;
+            gap: 0.5rem;
+        }
+        .accordion-content {
+            padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease;
+            color: #475569; line-height: 1.8; background: #ffffff; font-size: 1.05rem; overflow-wrap: break-word;
+        }
+        .accordion-content p { margin-bottom: 0.75rem; }
+        .accordion-item.active .accordion-content { padding: 1.5rem; max-height: 2500px; }
+        .accordion-item.active .accordion-header { background: #eff6ff; color: var(--primary-color); }
+        .accordion-icon { transition: transform 0.3s; font-size: 0.9rem; color: var(--primary-color); }
+        .active .accordion-icon { transform: rotate(180deg); }
+        .sub-heading{font-size:1.15rem;font-weight:700;color:#0f172a;margin:1.5rem 0 1rem;padding:0.6rem 1rem;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-left:4px solid #2563eb;border-radius:0 8px 8px 0;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+        .sub-heading .badge{font-size:.72rem;background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-weight:700}
+        .section-divider{border:none;border-top:2px dashed #e2e8f0;margin:2rem 0}
+        .year-badge {
+            display: inline-block; background: #fef3c7; color: #92400e;
+            padding: 2px 10px; border-radius: 20px; font-size: 0.78rem;
+            font-weight: 700; margin-left: 0.5rem; white-space: nowrap;
+        }
+        .coming-soon {
+            text-align: center; color: #64748b; padding: 3.5rem; background: #f8fafc;
+            border: 2px dashed #cbd5e1; border-radius: 16px; transition: transform 0.3s;
+        }
+        .coming-soon:hover { transform: scale(1.02); border-color: var(--primary-color); }
+
+        /* Vocabulary Table Styles */
+        .vocab-table-container { width: 100%; overflow-x: auto; margin-top: 1rem; border-radius: 12px; }
+        .vocab-table {
+            width: 100%; border-collapse: collapse;
+            background: #fff; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid var(--border-color); min-width: 500px;
+        }
+        .vocab-table th {
+            background: var(--primary-color); color: #fff; text-align: left;
+            padding: 1rem; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;
+        }
+        .vocab-table td {
+            padding: 1rem; border-bottom: 1px solid #f1f5f9; vertical-align: top;
+        }
+        .vocab-table tr:last-child td { border-bottom: none; }
+        .vocab-table tr:hover { background: #f8fafc; }
+        .word-cell { font-weight: 800; color: var(--primary-color); font-size: 1.1rem; min-width: 120px; }
+        .meaning-cell { color: #1e293b; font-weight: 600; font-size: 1rem; }
+        .synonym-cell { color: #64748b; font-size: 0.9rem; font-style: italic; }
+        
+        [data-theme="dark"] .vocab-table { background: #1e293b; border-color: #334155; }
+        [data-theme="dark"] .vocab-table td { border-bottom-color: #334155; color: #cbd5e1; }
+        [data-theme="dark"] .vocab-table tr:hover { background: #334155; }
+        [data-theme="dark"] .meaning-cell { color: #e2e8f0; }
+        [data-theme="dark"] .synonym-cell { color: #94a3b8; }
+
+        @media (max-width: 768px) {
+            .content-section { padding: 0.8rem 0.6rem; margin-bottom: 1rem; border-radius: 12px; }
+            .content-section h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+            .accordion-header { padding: 0.8rem 0.8rem; font-size: 0.95rem; }
+            .accordion-item.active .accordion-content { padding: 0.8rem 0.6rem; }
+            .sub-heading { font-size: 0.95rem; padding: 0.4rem 0.6rem; }
+            .page-header h2 { font-size: 1.6rem !important; }
+            .page-header p { font-size: 0.9rem !important; }
+        }
+    </style>
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+
+    <main class="page-container slide-up" style="max-width: 900px;">
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <a href="class12.html" id="class-crumb">Class Segment</a> &gt; <a href="#" id="subject-crumb">Subject</a> &gt; <span>Chapter Detail</span>
+        </div>
+
+        <div class="page-header" style="text-align: left; margin-bottom: 2.5rem;">
+            <h2 id="chapter-title-header" style="font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">Chapter Title Placeholder</h2>
+            <p style="margin: 0; font-size: 1.15rem; color: var(--text-light); font-weight: 500;">Master the most important questions, PYQs, and interactive answers.</p>
+        </div>
+
+        <!-- Important Questions -->
+        <div class="content-section" id="iq-section-box">
+            <h3>📝 Important Questions & Answers</h3>
+            <div id="iq-container">
+                <div class="coming-soon">
+                    <p>Loading questions...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Previous Year Questions -->
+        <div class="content-section" id="pyq-section-box">
+            <h3>📅 Previous Year Questions (PYQ)</h3>
+            <div id="pyq-container">
+                <div class="coming-soon">
+                    <p>Loading questions...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Section (New) -->
+        <div class="content-section" id="vocab-section-box" style="display: none;">
+            <h3>📖 Vocabulary / Word Power</h3>
+            <div id="vocab-container">
+                 <!-- Vocabulary Table will be injected here -->
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="content-section">
+            <h3>Notes</h3>
+            <div class="coming-soon">
+                <h4 style="margin-bottom: 0.75rem; color: #1e293b; font-size: 1.4rem; font-weight: 700;">Notes जल्द ही उपलब्ध होंगे...</h4>
+                <p style="font-size: 1.05rem; color: #64748b;">हमारे विषय विशेषज्ञों द्वारा उच्च स्तरीय नोट्स, माइंड मैप्स और सारांश तैयार किए जा रहे हैं।</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 ScoreUp Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="data/sanskrit-data.js?v=1.1"></script>
+    <script src="data/science-data.js?v=1.4"></script>
+    <script src="data/math-data.js?v=4.1"></script>
+    <script src="data/hindi-data.js?v=1.6"></script>
+    <script src="data/non-hindi-data.js?v=2.1"></script>
+    <script src="data/urdu-data.js?v=1.0"></script>
+    <script src="data/english-data.js?v=1.3"></script>
+    <script src="script.js?v=2.0"></script>
+    <script>
+        // === ACCORDION SYSTEM ===
+        function initAccordions() {
+            document.querySelectorAll('.accordion-header').forEach(function(header) {
+                header.onclick = function() {
+                    var item = this.parentElement;
+                    var wasActive = item.classList.contains('active');
+                    var section = item.closest('.content-section');
+                    if (section) {
+                        section.querySelectorAll('.accordion-item').forEach(function(o) { o.classList.remove('active'); });
+                    }
+                    if (!wasActive) item.classList.add('active');
+                };
+            });
+        }
+        initAccordions();
+
+        // === URL PARAMETERS ===
+        var params = new URLSearchParams(window.location.search);
+        var sub = params.get('subject');
+        var chapTitle = params.get('chapter') || params.get('title');
+
+        console.log('[ScoreUp] subject=' + sub + ', chapter=' + chapTitle);
+
+        // === BREADCRUMB ===
+        if (sub) {
+            document.getElementById('subject-crumb').innerText = sub;
+            var classNum = '12';
+            if (sub === 'Sanskrit' || sub === 'Urdu' || (document.referrer && document.referrer.indexOf('10') !== -1)) classNum = '10';
+            document.getElementById('subject-crumb').href = 'javascript:history.back()';
+            var classLink = document.getElementById('class-crumb');
+            if (classLink) {
+                classLink.innerText = 'Class ' + classNum;
+                classLink.href = 'class' + classNum + '.html';
+            }
+        }
+        if (chapTitle) document.getElementById('chapter-title-header').innerText = chapTitle;
+
+        // === LOAD SANSKRIT DATA ===
+        // === GLOBAL DATA MERGER ===
+        var allChapterData = [];
+        if (typeof sanskritData !== 'undefined') allChapterData = allChapterData.concat(sanskritData);
+        if (typeof scienceData !== 'undefined') allChapterData = allChapterData.concat(scienceData);
+        if (typeof mathData !== 'undefined') allChapterData = allChapterData.concat(mathData);
+        if (typeof hindiData !== 'undefined') allChapterData = allChapterData.concat(hindiData);
+        if (typeof nonHindiData !== 'undefined') allChapterData = allChapterData.concat(nonHindiData);
+        if (typeof urduData !== 'undefined') allChapterData = allChapterData.concat(urduData);
+        if (typeof englishData !== 'undefined') allChapterData = allChapterData.concat(englishData);
+
+        if (sub && chapTitle) {
+            var normChap = chapTitle.trim().normalize('NFC');
+            var chapterData = null;
+
+            for (var i = 0; i < allChapterData.length; i++) {
+                var d = allChapterData[i];
+                if (d.subject.toLowerCase() === sub.toLowerCase() && d.chapter.trim().normalize('NFC') === normChap) {
+                    chapterData = d;
+                    break;
+                }
+            }
+
+            if (chapterData) {
+                // RENDER LOGIC for Short/Long
+                function renderBlock(data, containerId, isPyq) {
+                    var container = document.getElementById(containerId);
+                    if (!container) return;
+                    
+                    var html = '';
+                    
+                    // Global Formatter for Answers
+                    function formatAnswer(text) {
+                        if (!text) return '';
+                        
+                        // Protect HTML tags by replacing them with placeholders
+                        var placeholders = [];
+                        var protectedText = text.replace(/(<[^>]+>)/g, function(match) {
+                            placeholders.push(match);
+                            return '___HTML_TAG_' + (placeholders.length - 1) + '___';
+                        });
+
+                        // 1. Detect Category Headers (e.g., "अवतल दर्पण:" or "चरण 1:") and bold them + break
+                        var formatted = protectedText.replace(/([^<>\n\.\?।="']+:)/g, '<strong>$1</strong><br>');
+                        
+                        // 2. Points (i), (ii) or (1), (2) on new lines
+                        formatted = formatted.replace(/\s*\(([ivx\d]+)\)/g, '<br>($1)');
+                        
+                        // 3. Newlines to <br>
+                        formatted = formatted.replace(/\n/g, '<br>');
+                        
+                        // 4. Cleanup trailing/leading <br> or multiple ones
+                        formatted = formatted.replace(/(<br>){3,}/g, '<br><br>');
+
+                        // Restore HTML tags from placeholders
+                        formatted = formatted.replace(/___HTML_TAG_(\d+)___/g, function(match, p1) {
+                            return placeholders[parseInt(p1)];
+                        });
+                        
+                        return formatted;
+                    }
+
+                    // Helper to render a list of questions
+                    function getQuestionsHtml(list, startIdx) {
+                        var qHtml = '';
+                        (list || []).forEach(function(qa, idx) {
+                            // Fix Double Numbering
+                            var qText = qa.question.trim();
+                            
+                            // Extract year badge [XX A] from the end of the question text
+                            var yearMatch = qText.match(/(.*?)\s*\[(.*?)\]\s*$/);
+                            var badgeText = qa.years || '';
+                            if(yearMatch) {
+                                qText = yearMatch[1];
+                                badgeText = badgeText ? badgeText + ', ' + yearMatch[2] : yearMatch[2];
+                            }
+
+                            var hasNumbering = /^Q\s*\d+[\.\-\s]/.test(qText);
+                            var displayQ = hasNumbering ? qText : 'Q' + (startIdx + idx) + '. ' + qText;
+
+                            var badge = badgeText ? '<span class="year-badge">' + badgeText + '</span>' : '';
+                            qHtml += '<div class="accordion-item">' +
+                                '<div class="accordion-header">' +
+                                    '<span>' + displayQ + badge + '</span>' +
+                                    '<span class="accordion-icon">▼</span>' +
+                                '</div>' +
+                                '<div class="accordion-content">' +
+                                    '<p style="margin-bottom: 0.4rem; color: var(--primary-color);"><strong>उत्तर:</strong></p>' +
+                                    '<p>' + formatAnswer(qa.answer) + '</p>' +
+                                '</div>' +
+                            '</div>';
+                        });
+                        return qHtml;
+                    }
+
+                    if (data.short || data.long) {
+                        var isHindi = sub.toLowerCase() === 'hindi';
+
+                        // Render Short questions if they exist
+                        if (data.short && data.short.length > 0) {
+                            var shortTitle = isHindi ? 'SECTION A: लघु उत्तरीय प्रश्न (2 अंक)' : '📋 लघु उत्तरीय प्रश्न';
+                            var shortBadge = isHindi ? (isPyq ? 'PYQ' : '') : (isPyq ? '2-3 अंक — PYQ' : '2-3 अंक');
+                            
+                            html += '<div class="sub-heading">' + shortTitle + (shortBadge ? ' <span class="badge">' + shortBadge + '</span>' : '') + '</div>';
+                            html += getQuestionsHtml(data.short, 1);
+                        }
+                        
+                        // Add divider only if both sections have data
+                        if (data.short && data.short.length > 0 && data.long && data.long.length > 0) {
+                            html += '<hr class="section-divider">';
+                        }
+                        
+                        // Render Long questions if they exist
+                        if (data.long && data.long.length > 0) {
+                            var longTitle = isHindi ? 'SECTION B: 💡 सप्रसंग व्याख्या (5 अंक)' : '📖 दीर्घ उत्तरीय प्रश्न';
+                            var longBadge = isHindi ? (isPyq ? 'PYQ' : '') : (isPyq ? '5 अंक — PYQ' : '5 अंक');
+
+                            html += '<div class="sub-heading">' + longTitle + (longBadge ? ' <span class="badge">' + longBadge + '</span>' : '') + '</div>';
+                            html += getQuestionsHtml(data.long, 1);
+                        }
+
+                        if ((!data.short || data.short.length === 0) && (!data.long || data.long.length === 0)) {
+                            html = '<div class="coming-soon"><p>No questions available for this section.</p></div>';
+                        }
+                    } else if (Array.isArray(data)) {
+                        // BACKWARD COMPATIBILITY
+                        html += getQuestionsHtml(data, 1);
+                    } else {
+                        html = '<div class="coming-soon"><p>No questions available for this section.</p></div>';
+                    }
+                    
+                    container.innerHTML = html;
+                }
+
+                renderBlock(chapterData.importantQuestions, 'iq-container', false);
+                
+                // Hide PYQ for English, Urdu, and Non-Hindi
+                var noPyqSubjects = ['english', 'urdu', 'non-hindi'];
+                if (noPyqSubjects.indexOf(sub.toLowerCase()) !== -1) {
+                    var pyqBox = document.getElementById('pyq-section-box');
+                    if (pyqBox) pyqBox.style.display = 'none';
+
+                    // English-specific Vocabulary
+                        if (sub.toLowerCase() === 'english' && chapterData.vocabulary && chapterData.vocabulary.length > 0) {
+                        var vocabBox = document.getElementById('vocab-section-box');
+                        var vocabContainer = document.getElementById('vocab-container');
+                        if (vocabBox && vocabContainer) {
+                            vocabBox.style.display = 'block';
+                            var vHtml = '<div class="vocab-table-container"><table class="vocab-table">' +
+                                '<thead><tr><th>Word</th><th>Meaning</th><th>Synonyms</th></tr></thead>' +
+                                '<tbody>';
+                            chapterData.vocabulary.forEach(function(v) {
+                                vHtml += '<tr>' +
+                                    '<td class="word-cell">' + v.word + '</td>' +
+                                    '<td class="meaning-cell">' + v.meaning + '</td>' +
+                                    '<td class="synonym-cell">' + (v.synonyms || '-') + '</td>' +
+                                 '</tr>';
+                            });
+                            vHtml += '</tbody></table></div>';
+                            vocabContainer.innerHTML = vHtml;
+                        }
+                    }
+                } else {
+                    renderBlock(chapterData.pyq, 'pyq-container', true);
+                }
+                initAccordions();
+                if (window.MathJax) {
+                    MathJax.typesetPromise().catch(function (err) { console.log(err.message); });
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

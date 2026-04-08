@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi (Class 10) - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+    <main class="page-container slide-up" style="max-width: 1000px; margin: 0 auto;">
+        <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-light); font-weight: 500;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt; <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt; <span>Hindi</span>
+        </div>
+        <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2>हिंदी (गोधूलि भाग 2)</h2>
+            <p>Class 10 Bihar Board Chapters</p>
+        </div>
+        
+        <style>
+            .section-title {
+                font-size: 1.5rem; font-weight: 800; color: #0f172a;
+                margin: 3.5rem 0 1.5rem; padding: 0.5rem 1.25rem;
+                background: linear-gradient(135deg, #eff6ff, #dbeafe);
+                border-left: 5px solid var(--primary-color);
+                border-radius: 0 12px 12px 0;
+                display: block;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            }
+            .chapter-container { margin-bottom: 4rem; }
+            .section-desc { color: var(--text-light); margin-top: -1rem; margin-bottom: 1.5rem; margin-left: 1.25rem; font-size: 0.95rem; font-weight: 500; }
+            
+            .chapter-author {
+                font-family: 'Kalam', cursive;
+                font-size: 0.9rem;
+                color: #7c3aed;
+                background: #f5f3ff;
+                padding: 0.2rem 0.8rem;
+                border-radius: 8px;
+                margin-left: auto;
+                margin-right: 1rem;
+                border: 1px dashed #c4b5fd;
+                white-space: nowrap;
+                transition: all 0.3s ease;
+            }
+            .chapter-card:hover .chapter-author {
+                background: #7c3aed;
+                color: white;
+                border-style: solid;
+                transform: scale(1.05);
+            }
+            
+            @media (max-width: 600px) {
+                .chapter-card { flex-wrap: wrap; }
+                .chapter-author { margin-left: 54px; margin-top: 0.5rem; margin-right: 0; width: fit-content; }
+                .chapter-arrow { margin-left: auto; }
+            }
+        </style>
+
+        <!-- Prose Section -->
+        <h3 class="section-title">पुस्तक 1: गोधूलि (भाग-2) - गद्य खण्ड (Prose Section)</h3>
+        <p class="section-desc">Bihar Board Class 10 Hindi Prose Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Hindi&chapter=श्रम विभाजन और जाति प्रथा" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">श्रम विभाजन और जाति प्रथा</div><div class="chapter-author">भीमराव अम्बेडकर</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=विष के दाँत" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">विष के दाँत</div><div class="chapter-author">नलिन विलोचन शर्मा</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=भारत से हम क्या सीखें" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">भारत से हम क्या सीखें</div><div class="chapter-author">मैक्स मूलर</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=नाखून क्यों बढ़ते हैं" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">नाखून क्यों बढ़ते हैं</div><div class="chapter-author">हजारी प्रसाद द्विवेदी</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=नागरी लिपि" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">नागरी लिपि</div><div class="chapter-author">गुणाकर मुले</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=बहादुर" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">बहादुर</div><div class="chapter-author">अमरकांत</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=परंपरा का मूल्यांकन" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title">परंपरा का मूल्यांकन</div><div class="chapter-author">रामविलास शर्मा</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=जित-जित मैं निरखत हूँ" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title">जित-जित मैं निरखत हूँ</div><div class="chapter-author">पंडित बिरजू महाराज</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=आविन्यों" class="chapter-card"><div class="chapter-number">9</div><div class="chapter-title">आविन्यों</div><div class="chapter-author">अशोक वाजपेयी</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=मछली" class="chapter-card"><div class="chapter-number">10</div><div class="chapter-title">मछली</div><div class="chapter-author">विनोद कुमार शुक्ल</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=नौबतखाने में इबादत" class="chapter-card"><div class="chapter-number">11</div><div class="chapter-title">नौबतखाने में इबादत</div><div class="chapter-author">यतीन्द्र मिश्र</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=शिक्षा और संस्कृति" class="chapter-card"><div class="chapter-number">12</div><div class="chapter-title">शिक्षा और संस्कृति</div><div class="chapter-author">महात्मा गांधी</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Poetry Section -->
+        <h3 class="section-title">पुस्तक 1: गोधूलि (भाग-2) - काव्य खण्ड (Poetry Section)</h3>
+        <p class="section-desc">Bihar Board Class 10 Hindi Poetry Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Hindi&chapter=राम बिनु बिरथे जगि जनमा" class="chapter-card"><div class="chapter-number">13</div><div class="chapter-title">राम बिनु बिरथे जगि जनमा</div><div class="chapter-author">गुरु नानक</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=प्रेम अयनि श्री राधिका" class="chapter-card"><div class="chapter-number">14</div><div class="chapter-title">प्रेम अयनि श्री राधिका</div><div class="chapter-author">रसखान</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=अति सूधो सनेह को मारग है" class="chapter-card"><div class="chapter-number">15</div><div class="chapter-title">अति सूधो सनेह को मारग है</div><div class="chapter-author">घनानंद</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=स्वदेशी" class="chapter-card"><div class="chapter-number">16</div><div class="chapter-title">स्वदेशी</div><div class="chapter-author">प्रेमघन</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=भारतमाता" class="chapter-card"><div class="chapter-number">17</div><div class="chapter-title">भारतमाता</div><div class="chapter-author">सुमित्रानंदन पंत</div><div class="chapter-author">सुमित्रानंदन पंत</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=जनतंत्र का जन्म" class="chapter-card"><div class="chapter-number">18</div><div class="chapter-title">जनतंत्र का जन्म</div><div class="chapter-author">रामधारी सिंह 'दिनकर'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=हिरोशिमा" class="chapter-card"><div class="chapter-number">19</div><div class="chapter-title">हिरोशिमा</div><div class="chapter-author">अज्ञेय</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=एक वृक्ष की हत्या" class="chapter-card"><div class="chapter-number">20</div><div class="chapter-title">एक वृक्ष की हत्या</div><div class="chapter-author">कुँवर नारायण</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=हमारी नींद" class="chapter-card"><div class="chapter-number">21</div><div class="chapter-title">हमारी नींद</div><div class="chapter-author">वीरेन डंगवाल</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=अक्षर-ज्ञान" class="chapter-card"><div class="chapter-number">22</div><div class="chapter-title">अक्षर-ज्ञान</div><div class="chapter-author">अनामिका</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=लौटकर आऊँगा फिर" class="chapter-card"><div class="chapter-number">23</div><div class="chapter-title">लौटकर आऊँगा फिर</div><div class="chapter-author">जीवनानंद दास</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=मेरे बिना तुम प्रभु" class="chapter-card"><div class="chapter-number">24</div><div class="chapter-title">मेरे बिना तुम प्रभु</div><div class="chapter-author">रेनर मारिया रिल्के</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Supplementary Section -->
+        <h3 class="section-title">पुस्तक 2: वर्णिका (भाग-2) - पूरक पुस्तिका (Supplementary Reader)</h3>
+        <p class="section-desc">Bihar Board Class 10 Hindi Supplementary Reader</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Hindi&chapter=दही वाली मंगम्मा" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">दही वाली मंगम्मा</div><div class="chapter-author">श्रीनिवास</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=ढहते विश्वास" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">ढहते विश्वास</div><div class="chapter-author">सातकोड़ी होता</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=माँ" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">माँ</div><div class="chapter-author">ईश्वर पेटलीकर</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=नगर" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">नगर</div><div class="chapter-author">सुजाता</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Hindi&chapter=धरती कब तक घूमेगी" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">धरती कब तक घूमेगी</div><div class="chapter-author">सावर दइया</div><div class="chapter-arrow">→</div></a>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

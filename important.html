@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Questions - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+
+    <main class="page-container slide-up" style="max-width: 1000px; margin: 0 auto; padding: 3rem 5%;">
+        <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2>Important Questions</h2>
+            <p>Access high-probability questions across all subjects</p>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <select class="btn" style="background: white; color: var(--text-dark); border: 1px solid #d1e3ff; padding: 0.8rem 1.5rem; outline: none; border-radius: 30px;"><option>Class 10</option><option>Class 12</option></select>
+            <select class="btn" style="background: white; color: var(--text-dark); border: 1px solid #d1e3ff; padding: 0.8rem 1.5rem; outline: none; border-radius: 30px;"><option>All Subjects</option><option>Science</option><option>Mathematics</option></select>
+        </div>
+
+        <div class="content-section">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Q. प्रकाश के परावर्तन के नियमों को लिखें। (Science - Class 10)</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>प्रकाश के परावर्तन के दो नियम हैं:
+                    <br>1. आपतित किरण, परावर्तित किरण और अभिलंब तीनों एक ही तल में होते हैं।
+                    <br>2. आपतन कोण हमेशा परावर्तन कोण के बराबर होता है।</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Q. वास्तविक संख्या क्या है? (Math - Class 10)</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>परिमेय और अपरिमेय संख्याओं के संग्रह को वास्तविक संख्या कहते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="footer-links">
+            <a href="about.html">About ScoreUp</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

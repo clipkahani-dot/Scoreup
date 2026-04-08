@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारत: संसाधन एवं उपयोग - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtopic-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .subtopic-card {
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
+            border: 1px solid #e2e8f0; border-radius: 20px;
+            padding: 2rem 1.75rem; text-decoration: none; color: #1e293b;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            transition: all 0.35s cubic-bezier(0.175,0.885,0.32,1.275);
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+        }
+        .subtopic-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(37,99,235,0.15);
+            border-color: #93c5fd;
+        }
+        .subtopic-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin-bottom: 1rem;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            box-shadow: 0 4px 12px rgba(37,99,235,0.1);
+        }
+        .subtopic-name {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-bottom: 0.5rem; line-height: 1.4;
+        }
+        .subtopic-desc {
+            font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem; line-height: 1.5;
+        }
+        .subtopic-btn {
+            display: inline-block; padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff; border-radius: 10px; font-weight: 700;
+            font-size: 0.85rem; transition: box-shadow 0.3s;
+            box-shadow: 0 3px 10px rgba(37,99,235,0.25);
+        }
+        .subtopic-card:hover .subtopic-btn {
+            box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+        }
+        .chapter-banner {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #bfdbfe; border-radius: 20px;
+            padding: 2rem; margin-bottom: 0.5rem;
+        }
+        .chapter-banner h2 {
+            font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem;
+        }
+        .chapter-banner p { color: #475569; font-size: 1rem; font-weight: 500; }
+        .chapter-banner .tag {
+            display: inline-block; background: #2563eb; color: #fff;
+            padding: 4px 14px; border-radius: 20px; font-size: 0.78rem;
+            font-weight: 700; margin-bottom: 0.75rem;
+        }
+        @media (max-width: 640px) {
+            .subtopic-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .subtopic-card { padding: 1.5rem; }
+            .chapter-banner h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+
+    <main class="page-container slide-up" style="max-width: 900px;">
+        <div class="breadcrumb" style="margin-bottom: 1.5rem; color: #64748b; font-weight: 500; font-size: 0.95rem;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt;
+            <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt;
+            <a href="sst10.html" style="color: var(--primary-color); text-decoration: none;">Social Science</a> &gt;
+            <span>भूगोल - अध्याय 1</span>
+        </div>
+
+        <div class="chapter-banner">
+            <span class="tag">📚 भूगोल (Geography)</span>
+            <h2>अध्याय 1: भारत — संसाधन एवं उपयोग</h2>
+            <p>इस अध्याय में 5 उप-विषय हैं। प्रत्येक उप-विषय के महत्वपूर्ण प्रश्न और PYQ देखने के लिए नीचे क्लिक करें।</p>
+        </div>
+
+        <div class="subtopic-grid">
+            <a href="geo-ch1-detail.html?topic=1" class="subtopic-card">
+                <div class="subtopic-icon">🌍</div>
+                <div class="subtopic-name">प्राकृतिक संसाधन</div>
+                <div class="subtopic-desc">भूमि, मिट्टी, जल, वन, खनिज और ऊर्जा संसाधनों का परिचय</div>
+                <span class="subtopic-btn">प्रश्न देखें →</span>
+            </a>
+            <a href="geo-ch1-detail.html?topic=2" class="subtopic-card">
+                <div class="subtopic-icon">💧</div>
+                <div class="subtopic-name">जल संसाधन</div>
+                <div class="subtopic-desc">जल संरक्षण, बाँध, वर्षा जल संचयन और जल प्रदूषण</div>
+                <span class="subtopic-btn">प्रश्न देखें →</span>
+            </a>
+            <a href="geo-ch1-detail.html?topic=3" class="subtopic-card">
+                <div class="subtopic-icon">🌳</div>
+                <div class="subtopic-name">वन संसाधन</div>
+                <div class="subtopic-desc">वनों के प्रकार, वन संरक्षण, जैव विविधता और वन नीति</div>
+                <span class="subtopic-btn">प्रश्न देखें →</span>
+            </a>
+            <a href="geo-ch1-detail.html?topic=4" class="subtopic-card">
+                <div class="subtopic-icon">⛏️</div>
+                <div class="subtopic-name">खनिज संसाधन</div>
+                <div class="subtopic-desc">लौह, अलौह, अधात्विक खनिज और खनिज संरक्षण</div>
+                <span class="subtopic-btn">प्रश्न देखें →</span>
+            </a>
+            <a href="geo-ch1-detail.html?topic=5" class="subtopic-card">
+                <div class="subtopic-icon">⚡</div>
+                <div class="subtopic-name">शक्ति (ऊर्जा) संसाधन</div>
+                <div class="subtopic-desc">कोयला, पेट्रोलियम, जल विद्युत, परमाणु ऊर्जा और नवीकरणीय ऊर्जा</div>
+                <span class="subtopic-btn">प्रश्न देखें →</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

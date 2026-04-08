@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreUp – Bihar Board Quality-First Learning Platform</title>
+    <meta name="description" content="ScoreUp – Bihar Board Class 10 & 12 students ke liye Quality-First Learning Platform. Chapter-wise Important Questions, PYQs, and 100% accurate subjective answers.">
+    <meta name="keywords" content="Bihar Board, BSEB, Class 10, Class 12, Important Questions, PYQ, Subjective Answers, ScoreUp">
+    <meta name="author" content="ScoreUp">
+    <meta property="og:title" content="ScoreUp – Bihar Board Learning Platform">
+    <meta property="og:description" content="Chapter-wise Important Questions, PYQs & accurate subjective answers for Bihar Board students.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+</head>
+<body class="fade-in">
+    <!-- Header & Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions, subjects..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;">
+                <!-- Internal script.js will dynamically append results here -->
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="class10.html">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+
+    <!-- Top Ad Banner Placeholder -->
+    <div class="ad-placeholder banner fade-in">Advertisement (Top Banner)</div>
+
+    <!-- Hero Section -->
+    <main class="hero slide-up">
+        <div class="hero-content glassmorphism">
+            
+            <!-- Badges -->
+            <div class="hero-badges">
+                <span class="badge">🏆 Bihar Board Focused</span>
+                <span class="badge">📝 Subjective Answer Ready</span>
+                <span class="badge">⭐ Quality-First Platform</span>
+            </div>
+
+            <h1 class="main-heading">ScoreUp – <span class="highlight">Bihar Board</span> Students के लिए Quality-First Learning Platform</h1>
+            
+            <p class="sub-heading">Chapter-wise Important Questions, PYQs, and accuracy-focused answers with simple explanations designed to help students write better subjective answers and aim for full marks.</p>
+
+            <div class="cta-buttons">
+                <a href="class10.html" class="btn btn-primary ripple"><span class="btn-icon">📘</span> Class 10</a>
+                <a href="class12.html" class="btn btn-secondary ripple"><span class="btn-icon">🎓</span> Class 12</a>
+            </div>
+
+            <!-- Brand Statement Box -->
+            <div class="brand-box">
+                <div class="quote-mark">"</div>
+                <p class="statement-main">Objective questions कोई भी सिखा सकता है, लेकिन subjective answers में precision चाहिए. <br><strong>ScoreUp इसी gap को fill करता है.</strong></p>
+                <div class="statement-divider"></div>
+                <p class="statement-sub">Average students objective पर ध्यान देते हैं, toppers subjective mastery पर. ScoreUp आपको वही advantage देता है.</p>
+            </div>
+
+            <!-- Trust Points -->
+            <div class="hero-trust-points">
+                <span><i class="icon">✨</i> Quality over quantity</span>
+                <span class="dot">•</span>
+                <span><i class="icon">✒️</i> Subjective answer focused</span>
+                <span class="dot">•</span>
+                <span><i class="icon">🎯</i> Exam-ready, student-friendly content</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="about.html">About ScoreUp</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 ScoreUp Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
+    </script>
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-link active">
+            <span class="bottom-nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="class10.html" class="bottom-nav-link">
+            <span class="bottom-nav-icon">📘</span>
+            <span>Class 10</span>
+        </a>
+        <a href="class12.html" class="bottom-nav-link">
+            <span class="bottom-nav-icon">🎓</span>
+            <span>Class 12</span>
+        </a>
+    </nav>
+
+</body>
+</html>

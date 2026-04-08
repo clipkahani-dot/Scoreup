@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Subjects - ScoreUp</title>
+    <meta name="description" content="ScoreUp Class 12 Bihar Board - Physics, Chemistry, Biology, Math, Hindi, English, Accountancy & Economics chapter-wise study materials.">
+    <meta name="keywords" content="Bihar Board Class 12, BSEB Inter, Important Questions, PYQ, ScoreUp">
+    <meta property="og:title" content="Class 12 Subjects - ScoreUp">
+    <meta property="og:description" content="Bihar Board Class 12 chapter-wise Important Questions and subjective answers.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modern Educational App Specific Styles for Class Page */
+        body {
+            /* Light baby blue to white gradient as requested */
+            background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .page-header h2 {
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            color: #555;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @media (min-width: 768px) {
+            .subjects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .subjects-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2.5rem;
+            }
+        }
+
+        /* Glassmorphic Premium Card */
+        .subject-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(74, 144, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(74, 144, 255, 0.18);
+            border-color: rgba(74, 144, 255, 0.4);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .subject-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e6f0ff 0%, #cce0ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.8rem;
+            color: #4a90ff; /* Primary accent */
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), 0 4px 10px rgba(74, 144, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .subject-card:hover .subject-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #4a90ff 0%, #2f73d9 100%);
+            color: white;
+        }
+
+        .subject-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .subject-info h3 {
+            font-size: 1.4rem;
+            color: #222;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subject-info p {
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 2rem;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #4a90ff 0%, #2f73d9 100%);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 255, 0.25);
+            border: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gradient::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.5s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(74, 144, 255, 0.4);
+        }
+
+        .btn-gradient:hover::after {
+            left: 150%;
+        }
+
+        /* Essential Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html">Class 10</a>
+            <a href="class12.html" class="active">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+
+    <main class="page-container" style="padding: 3rem 5%; flex-grow: 1;">
+        <div class="ad-placeholder banner" style="margin-bottom: 3.5rem; background: rgba(255,255,255,0.5); border-color: #d1e3ff; color: #4a90ff; backdrop-filter: blur(5px);">
+            Advertisement (Top Banner)
+        </div>
+        
+        <div class="page-header">
+            <h2>Class 12 Subjects</h2>
+            <p>Select your subject below to explore chapter-wise summaries, PYQs, and essential study materials tailored for top scores.</p>
+        </div>
+
+        <div class="subjects-grid">
+            <!-- Mathematics -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Mathematics</h3>
+                    <p>13 Chapters</p>
+                </div>
+                <a href="math12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Physics -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Physics</h3>
+                    <p>10 Chapters</p>
+                </div>
+                <a href="physics12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Chemistry -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Chemistry</h3>
+                    <p>16 Chapters</p>
+                </div>
+                <a href="chemistry12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Biology -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Biology</h3>
+                    <p>16 Chapters</p>
+                </div>
+                <a href="biology12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- English -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>English</h3>
+                    <p>21 Chapters</p>
+                </div>
+                <a href="english12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Hindi -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 15h4.498"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Hindi</h3>
+                    <p>26 Chapters</p>
+                </div>
+                <a href="hindi12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Accountancy -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Accountancy</h3>
+                    <p>12 Chapters</p>
+                </div>
+                <a href="accountancy12.html" class="btn-gradient">View Chapters</a>
+            </div>
+
+            <!-- Economics -->
+            <div class="subject-card">
+                <div class="subject-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <div class="subject-info">
+                    <h3>Economics</h3>
+                    <p>10 Chapters</p>
+                </div>
+                <a href="economics12.html" class="btn-gradient">View Chapters</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">About ScoreUp</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 ScoreUp Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

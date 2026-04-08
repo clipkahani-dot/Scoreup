@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English (Class 10) - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+    <main class="page-container slide-up" style="max-width: 1000px; margin: 0 auto;">
+        <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-light); font-weight: 500;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt; <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt; <span>English</span>
+        </div>
+        <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2>English (Panorama Part II)</h2>
+            <p>Bihar Board Class 10 English Syllabus (Index)</p>
+        </div>
+
+        <style>
+            .section-title {
+                font-size: 1.5rem; font-weight: 800; color: #0f172a;
+                margin: 3.5rem 0 1.5rem; padding: 0.5rem 1.25rem;
+                background: linear-gradient(135deg, #eff6ff, #dbeafe);
+                border-left: 5px solid var(--primary-color);
+                border-radius: 0 12px 12px 0;
+                display: block;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            }
+            .chapter-container { margin-bottom: 4rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+            .section-desc { color: var(--text-light); margin-top: -1rem; margin-bottom: 1.5rem; margin-left: 1.25rem; font-size: 0.95rem; font-weight: 500; }
+            
+            .chapter-author {
+                font-family: 'Kalam', cursive;
+                font-size: 0.9rem;
+                color: #7c3aed;
+                background: #f5f3ff;
+                padding: 0.2rem 0.8rem;
+                border-radius: 8px;
+                margin-left: auto;
+                margin-right: 1rem;
+                border: 1px dashed #c4b5fd;
+                white-space: nowrap;
+                transition: all 0.3s ease;
+            }
+            .chapter-card:hover .chapter-author {
+                background: #7c3aed;
+                color: white;
+                border-style: solid;
+                transform: scale(1.05);
+            }
+            
+            @media (max-width: 600px) {
+                .chapter-card { flex-wrap: wrap; }
+                .chapter-author { margin-left: 54px; margin-top: 0.5rem; margin-right: 0; width: fit-content; }
+                .chapter-arrow { margin-left: auto; }
+            }
+        </style>
+
+        <!-- Prose Section -->
+        <h3 class="section-title">SECTION A: PROSE (गद्य खंड) - Panorama Part II</h3>
+        <p class="section-desc">Bihar Board Class 10 English Prose Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=English&chapter=The Pace for Living" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">The Pace for Living</div><div class="chapter-author">R.C. Hutchinson</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Me and the Ecology Bit" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">Me and the Ecology Bit</div><div class="chapter-author">Joan Lexau</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Gillu" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">Gillu</div><div class="chapter-author">Mahadevi Verma</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=What is Wrong with Indian Films" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">What is Wrong with Indian Films</div><div class="chapter-author">Satyajit Ray</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Acceptance Speech" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">Acceptance Speech</div><div class="chapter-author">Aung San Suu Kyi</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Once Upon a Time" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">Once Upon a Time</div><div class="chapter-author">Toni Morrison</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=The Unity of Indian Culture" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title">The Unity of Indian Culture</div><div class="chapter-author">Humayun Kabir</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Little Girls Wiser Than Men" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title">Little Girls Wiser Than Men</div><div class="chapter-author">Leo Tolstoy</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Poetry Section -->
+        <h3 class="section-title">SECTION B: POETRY (काव्य खंड) - Panorama Part II</h3>
+        <p class="section-desc">Bihar Board Class 10 English Poetry Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=English&chapter=God Made the Country" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">God Made the Country</div><div class="chapter-author">William Cowper</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Ode on Solitude" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">Ode on Solitude</div><div class="chapter-author">Alexander Pope</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Polythene Bag" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">Polythene Bag</div><div class="chapter-author">Durga Prasad Panda</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Thinner Than a Crescent" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">Thinner Than a Crescent</div><div class="chapter-author">Vidyapati</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=The Empty Heart" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">The Empty Heart</div><div class="chapter-author">Periasamy Thooran</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Koel" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">Koel</div><div class="chapter-author">Puran Singh</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=The Sleeping Porter" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title">The Sleeping Porter</div><div class="chapter-author">Laxmi Prasad Devkota</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Martha" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title">Martha</div><div class="chapter-author">Walter de la Mare</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Supplementary Section -->
+        <h3 class="section-title">SECTION C: SUPPLEMENTARY READER (पूरक पुस्तिका) - English Reader Part II</h3>
+        <p class="section-desc">Bihar Board Class 10 English Supplementary Reader</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=English&chapter=January Night" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">January Night</div><div class="chapter-author">Premchand</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Allergy" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">Allergy</div><div class="chapter-author">Dr. Rana S.P. Singh</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=The Bet" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">The Bet</div><div class="chapter-author">Anton Chekhov</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Quality" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">Quality</div><div class="chapter-author">John Galsworthy</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Sun and Moon" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">Sun and Moon</div><div class="chapter-author">Katherine Mansfield</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Two Horizons" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">Two Horizons</div><div class="chapter-author">Binapani Mohanty</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=English&chapter=Love Defiled" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title">Love Defiled</div><div class="chapter-author">Giridhar Jha</div><div class="chapter-arrow">→</div></a>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

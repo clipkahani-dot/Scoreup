@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - ScoreUp</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0ecff 0%, #f0f4ff 50%, #e8f0fe 100%);
+            min-height: 100vh; color: #1e293b;
+        }
+        .admin-header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff; padding: 1.25rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+        }
+        .admin-header h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        .admin-header a { color: #bfdbfe; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .admin-header a:hover { color: #fff; }
+        .admin-container {
+            max-width: 720px; margin: 2rem auto; padding: 0 1rem;
+        }
+        .admin-card {
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
+            border-radius: 20px; padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;
+        }
+        .admin-card h2 {
+            font-size: 1.6rem; font-weight: 800; color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .admin-card .subtitle {
+            color: #64748b; font-size: 0.95rem; margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block; font-weight: 700; color: #334155;
+            margin-bottom: 0.5rem; font-size: 0.95rem;
+        }
+        .form-group select,
+        .form-group input,
+        .form-group textarea {
+            width: 100%; padding: 0.85rem 1rem;
+            border: 2px solid #e2e8f0; border-radius: 12px;
+            font-family: 'Inter', sans-serif; font-size: 1rem;
+            color: #1e293b; background: #f8fafc;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+        .form-group select:focus,
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+            background: #fff;
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .year-field { display: none; }
+        .year-field.visible { display: block; }
+        .submit-btn {
+            width: 100%; padding: 1rem;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff; border: none; border-radius: 14px;
+            font-size: 1.1rem; font-weight: 700; cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+            margin-top: 0.5rem;
+        }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,99,235,0.4); }
+        .submit-btn:active { transform: translateY(0); }
+        .toast {
+            position: fixed; top: 1.5rem; right: 1.5rem;
+            background: #16a34a; color: #fff;
+            padding: 1rem 1.5rem; border-radius: 14px;
+            font-weight: 700; font-size: 1rem;
+            box-shadow: 0 8px 24px rgba(22,163,74,0.3);
+            transform: translateX(120%); transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+            z-index: 9999;
+        }
+        .toast.show { transform: translateX(0); }
+        .toast.error { background: #dc2626; box-shadow: 0 8px 24px rgba(220,38,38,0.3); }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .stat-chip {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #bfdbfe; border-radius: 12px;
+            padding: 0.75rem 1.25rem; font-weight: 700;
+            color: #1d4ed8; font-size: 0.9rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .stat-chip .num { font-size: 1.3rem; font-weight: 800; }
+
+        /* Saved data viewer */
+        .viewer-section {
+            margin-top: 2rem;
+        }
+        .viewer-toggle {
+            background: none; border: 2px solid #e2e8f0;
+            border-radius: 12px; padding: 0.75rem 1.25rem;
+            font-family: 'Inter', sans-serif; font-size: 0.95rem;
+            font-weight: 700; color: #2563eb; cursor: pointer;
+            width: 100%; transition: all 0.3s;
+        }
+        .viewer-toggle:hover { background: #eff6ff; border-color: #2563eb; }
+        .saved-list {
+            display: none; margin-top: 1rem; max-height: 400px;
+            overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 12px;
+        }
+        .saved-list.open { display: block; }
+        .saved-item {
+            padding: 1rem 1.25rem; border-bottom: 1px solid #f1f5f9;
+            font-size: 0.9rem; line-height: 1.5;
+        }
+        .saved-item:last-child { border-bottom: none; }
+        .saved-item .meta {
+            font-size: 0.78rem; color: #64748b; margin-bottom: 0.3rem;
+            display: flex; gap: 0.5rem; flex-wrap: wrap;
+        }
+        .saved-item .meta span {
+            background: #f1f5f9; padding: 2px 8px; border-radius: 6px;
+        }
+        .saved-item .q { font-weight: 700; color: #1e293b; }
+        .saved-item .a { color: #475569; margin-top: 0.25rem; }
+        .delete-btn {
+            float: right; background: #fee2e2; color: #dc2626;
+            border: none; border-radius: 8px; padding: 4px 10px;
+            font-size: 0.78rem; font-weight: 700; cursor: pointer;
+        }
+        .delete-btn:hover { background: #fecaca; }
+        .clear-all-btn {
+            background: #fee2e2; color: #dc2626; border: none;
+            border-radius: 10px; padding: 0.6rem 1.2rem;
+            font-weight: 700; font-size: 0.85rem; cursor: pointer;
+            margin-top: 0.75rem; transition: background 0.3s;
+        }
+        .clear-all-btn:hover { background: #fecaca; }
+
+        @media (max-width: 600px) {
+            .admin-card { padding: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .stats-bar { flex-direction: column; }
+            .admin-header { padding: 1rem; }
+            .admin-header h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="admin-header">
+        <h1>🛠️ ScoreUp Admin Panel</h1>
+        <a href="index.html">← Back to Website</a>
+    </header>
+
+    <div class="admin-container">
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="stat-chip">📝 Total Questions: <span class="num" id="totalCount">0</span></div>
+            <div class="stat-chip">⭐ Important: <span class="num" id="iqCount">0</span></div>
+            <div class="stat-chip">📅 PYQ: <span class="num" id="pyqCount">0</span></div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="admin-card">
+            <h2>Add New Question</h2>
+            <p class="subtitle">Fill in the details below to add a question to the database.</p>
+
+            <form id="qaForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="classSelect">📚 Class</label>
+                        <select id="classSelect" required>
+                            <option value="">-- Select Class --</option>
+                            <option value="10">Class 10</option>
+                            <option value="12">Class 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectSelect">📖 Subject</label>
+                        <select id="subjectSelect" required>
+                            <option value="">-- Select Subject --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="chapterInput">📑 Chapter Name</label>
+                    <input type="text" id="chapterInput" placeholder="e.g. मङ्गलम् or Real Numbers" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="typeSelect">🏷️ Question Type</label>
+                        <select id="typeSelect" required>
+                            <option value="">-- Select Type --</option>
+                            <option value="important">Important Question</option>
+                            <option value="pyq">Previous Year Question (PYQ)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="categorySelect">📊 Category (Marks)</label>
+                        <select id="categorySelect" required>
+                            <option value="short">Short Answer (2–3 marks)</option>
+                            <option value="long">Long Answer (5 marks)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group year-field" id="yearGroup">
+                    <label for="yearInput">📅 Year (Only for PYQ)</label>
+                    <input type="text" id="yearInput" placeholder="e.g. 2023, 2022">
+                </div>
+
+                <div class="form-group">
+                    <label for="questionInput">❓ Question</label>
+                    <textarea id="questionInput" placeholder="Type the question here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="answerInput">✅ Answer</label>
+                    <textarea id="answerInput" placeholder="Type the answer here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">➕ Add Question</button>
+            </form>
+
+            <!-- Saved Data Viewer -->
+            <div class="viewer-section">
+                <div style="display:flex; gap:10px; margin-bottom:10px;">
+                    <button class="viewer-toggle" id="viewerBtn" onclick="toggleViewer()" style="flex:1;">📋 View Saved Questions</button>
+                    <button class="viewer-toggle" id="exportBtn" onclick="exportData()" style="flex:1; border-color:#16a34a; color:#16a34a;">📥 Export for Website</button>
+                </div>
+                <div class="saved-list" id="savedList"></div>
+                <button class="clear-all-btn" id="clearAllBtn" style="display:none;" onclick="clearAll()">🗑️ Clear All Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // === Subject lists by class ===
+        var subjects = {
+            '10': ['Mathematics', 'Science', 'Social Science', 'Hindi', 'English', 'Sanskrit', 'Urdu', 'Non-Hindi'],
+            '12': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Hindi', 'English', 'Accountancy', 'Economics', 'History', 'Political Science', 'Geography']
+        };
+
+        // === Class change -> update subjects ===
+        document.getElementById('classSelect').addEventListener('change', function() {
+            var sel = document.getElementById('subjectSelect');
+            sel.innerHTML = '<option value="">-- Select Subject --</option>';
+            var list = subjects[this.value] || [];
+            list.forEach(function(s) {
+                var opt = document.createElement('option');
+                opt.value = s; opt.textContent = s;
+                sel.appendChild(opt);
+            });
+        });
+
+        // === Type change -> show/hide year field ===
+        document.getElementById('typeSelect').addEventListener('change', function() {
+            var yg = document.getElementById('yearGroup');
+            if (this.value === 'pyq') {
+                yg.classList.add('visible');
+            } else {
+                yg.classList.remove('visible');
+                document.getElementById('yearInput').value = '';
+            }
+        });
+
+        // === Get stored data ===
+        function getData() {
+            try {
+                return JSON.parse(localStorage.getItem('scoreup_questions') || '[]');
+            } catch(e) { return []; }
+        }
+
+        // === Save data ===
+        function saveData(arr) {
+            localStorage.setItem('scoreup_questions', JSON.stringify(arr));
+        }
+
+        // === Update stats ===
+        function updateStats() {
+            var data = getData();
+            var iq = 0, pyq = 0;
+            data.forEach(function(d) {
+                if (d.type === 'important') iq++;
+                else pyq++;
+            });
+            document.getElementById('totalCount').textContent = data.length;
+            document.getElementById('iqCount').textContent = iq;
+            document.getElementById('pyqCount').textContent = pyq;
+        }
+
+        // === Toast ===
+        function showToast(msg, isError) {
+            var t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast show' + (isError ? ' error' : '');
+            setTimeout(function() { t.className = 'toast'; }, 3000);
+        }
+
+        // === Form Submit ===
+        document.getElementById('qaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var cls = document.getElementById('classSelect').value;
+            var subj = document.getElementById('subjectSelect').value;
+            var chap = document.getElementById('chapterInput').value.trim();
+            var type = document.getElementById('typeSelect').value;
+            var question = document.getElementById('questionInput').value.trim();
+            var answer = document.getElementById('answerInput').value.trim();
+            var year = document.getElementById('yearInput').value.trim();
+
+            if (!cls || !subj || !chap || !type || !question || !answer) {
+                showToast('⚠️ Please fill all required fields!', true);
+                return;
+            }
+
+            var entry = {
+                id: Date.now(),
+                class: cls,
+                subject: subj,
+                chapter: chap,
+                type: type,
+                category: document.getElementById('categorySelect').value,
+                question: question,
+                answer: answer,
+                year: type === 'pyq' ? year : '',
+                addedAt: new Date().toLocaleString('en-IN')
+            };
+
+            var data = getData();
+            data.push(entry);
+            saveData(data);
+
+            showToast('✅ Question added successfully!');
+            updateStats();
+
+            // Clear form fields (keep class & subject selected)
+            document.getElementById('chapterInput').value = '';
+            document.getElementById('typeSelect').value = '';
+            document.getElementById('questionInput').value = '';
+            document.getElementById('answerInput').value = '';
+            document.getElementById('yearInput').value = '';
+            document.getElementById('yearGroup').classList.remove('visible');
+
+            // Refresh viewer if open
+            var sl = document.getElementById('savedList');
+            if (sl.classList.contains('open')) renderList();
+        });
+
+        // === Toggle Viewer ===
+        function toggleViewer() {
+            var sl = document.getElementById('savedList');
+            var cb = document.getElementById('clearAllBtn');
+            sl.classList.toggle('open');
+            if (sl.classList.contains('open')) {
+                renderList();
+                cb.style.display = 'block';
+            } else {
+                cb.style.display = 'none';
+            }
+        }
+
+        // === Render saved list ===
+        function renderList() {
+            var data = getData();
+            var sl = document.getElementById('savedList');
+            if (data.length === 0) {
+                sl.innerHTML = '<div class="saved-item" style="text-align:center;color:#64748b;">No questions saved yet.</div>';
+                return;
+            }
+            var html = '';
+            // Show newest first
+            for (var i = data.length - 1; i >= 0; i--) {
+                var d = data[i];
+                var typeLabel = d.type === 'pyq' ? 'PYQ' : 'Important';
+                var yearStr = d.year ? ' | ' + d.year : '';
+                html += '<div class="saved-item">' +
+                    '<button class="delete-btn" onclick="deleteItem(' + d.id + ')">✕ Delete</button>' +
+                    '<div class="meta">' +
+                        '<span>Class ' + d.class + '</span>' +
+                        '<span>' + d.subject + '</span>' +
+                        '<span>' + d.chapter + '</span>' +
+                        '<span>' + typeLabel + '</span>' +
+                        '<span>' + (d.category === 'long' ? 'Long' : 'Short') + '</span>' +
+                        (d.year ? '<span>' + d.year + '</span>' : '') +
+                    '</div>' +
+                    '<div class="q">Q: ' + d.question + '</div>' +
+                    '<div class="a">A: ' + d.answer + '</div>' +
+                '</div>';
+            }
+            sl.innerHTML = html;
+        }
+
+        // === Delete single item ===
+        function deleteItem(id) {
+            var data = getData().filter(function(d) { return d.id !== id; });
+            saveData(data);
+            updateStats();
+            renderList();
+            showToast('🗑️ Question deleted.');
+        }
+
+        // === Export Data ===
+        function exportData() {
+            var data = getData();
+            if (data.length === 0) {
+                showToast('❌ No data to export!', true);
+                return;
+            }
+            
+            // Format data into a structure that can be easily used in static files
+            var exported = {};
+            data.forEach(function(item) {
+                if (!exported[item.chapter]) {
+                    exported[item.chapter] = {
+                        chapter: item.chapter,
+                        subject: item.subject,
+                        importantQuestions: { short: [], long: [] },
+                        pyq: { short: [], long: [] }
+                    };
+                }
+                var target = item.type === 'pyq' ? exported[item.chapter].pyq : exported[item.chapter].importantQuestions;
+                var list = item.category === 'long' ? target.long : target.short;
+                list.push({
+                    question: item.question,
+                    answer: item.answer,
+                    years: item.year || undefined
+                });
+            });
+
+            var blob = new Blob([JSON.stringify(Object.values(exported), null, 2)], { type: 'application/json' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'exported_questions.json';
+            a.click();
+            showToast('✅ Data exported! Open the JSON and copy-paste it to your data files.');
+        }
+
+        // === Clear all ===
+        function clearAll() {
+            if (confirm('Are you sure you want to delete ALL saved questions?')) {
+                localStorage.removeItem('scoreup_questions');
+                updateStats();
+                renderList();
+                showToast('🗑️ All data cleared.');
+            }
+        }
+
+        // === Init ===
+        updateStats();
+    </script>
+</body>
+</html>
