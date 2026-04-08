@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Hindi (Class 10) - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .chapter-author {
+            font-family: 'Kalam', cursive;
+            font-size: 0.9rem;
+            color: #7c3aed;
+            background: #f5f3ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: 1rem;
+            border: 1px dashed #c4b5fd;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        .chapter-card:hover .chapter-author {
+            background: #7c3aed;
+            color: white;
+            border-style: solid;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 600px) {
+            .chapter-card { flex-wrap: wrap; }
+            .chapter-author { margin-left: 54px; margin-top: 0.5rem; margin-right: 0; width: fit-content; }
+            .chapter-arrow { margin-left: auto; }
+        }
+    </style>
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+    <main class="page-container slide-up" style="max-width: 1000px; margin: 0 auto;">
+        <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-light); font-weight: 500;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt; <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt; <span>Non-Hindi</span>
+        </div>
+        <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2>अहिन्दी (नॉन-हिंदी / किसलय)</h2>
+            <p>Class 10 Bihar Board Chapters</p>
+        </div>
+        
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Non-Hindi&chapter=तू ज़िन्दा है तो..." class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">तू ज़िन्दा है तो...</div><div class="chapter-author">शंकर शैलेन्द्र</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=ईदगाह" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">ईदगाह</div><div class="chapter-author">प्रेमचन्द</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=कर्मवीर" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">कर्मवीर</div><div class="chapter-author">अयोध्या सिंह उपाध्याय 'हरिऔध'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=बालगोबिन भगत" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">बालगोबिन भगत</div><div class="chapter-author">रामवृक्ष बेनीपुरी</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=हुंडरू का जलप्रपात" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">हुंडरू का जलप्रपात</div><div class="chapter-author">कामता प्रसाद सिंह 'काम'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=बिहारी के दोहे" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">बिहारी के दोहे</div><div class="chapter-author">बिहारी</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=ठेस" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title">ठेस</div><div class="chapter-author">फणीश्वरनाथ 'रेणु'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=बच्चे की दुआ" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title">बच्चे की दुआ</div><div class="chapter-author">मुहम्मद इक़बाल</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=अशोक का शस्त्र-त्याग" class="chapter-card"><div class="chapter-number">9</div><div class="chapter-title">अशोक का शस्त्र-त्याग</div><div class="chapter-author">बंशीधर श्रीवास्तव</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=ईर्ष्या, तू न गई मेरे मन से" class="chapter-card"><div class="chapter-number">10</div><div class="chapter-title">ईर्ष्या, तू न गई मेरे मन से</div><div class="chapter-author">रामधारी सिंह 'दिनकर'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=कबीर के पद" class="chapter-card"><div class="chapter-number">11</div><div class="chapter-title">कबीर के पद</div><div class="chapter-author">कबीर दास</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=विक्रमशिला" class="chapter-card"><div class="chapter-number">12</div><div class="chapter-title">विक्रमशिला</div><div class="chapter-author">पाठांश</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=दीदी की डायरी" class="chapter-card"><div class="chapter-number">13</div><div class="chapter-title">दीदी की डायरी</div><div class="chapter-author">संकलित</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=पीपल" class="chapter-card"><div class="chapter-number">14</div><div class="chapter-title">पीपल</div><div class="chapter-author">गोपाल सिंह 'नेपाली'</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=दीनबंधु निराला" class="chapter-card"><div class="chapter-number">15</div><div class="chapter-title">दीनबंधु निराला</div><div class="chapter-author">शिवपूजन सहाय</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=खेमा" class="chapter-card"><div class="chapter-number">16</div><div class="chapter-title">खेमा</div><div class="chapter-author">संकलित</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=खुशबू रचते हैं हाथ" class="chapter-card"><div class="chapter-number">17</div><div class="chapter-title">खुशबू रचते हैं हाथ</div><div class="chapter-author">अरुण कमल</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=हौसले की उड़ान" class="chapter-card"><div class="chapter-number">18</div><div class="chapter-title">हौसले की उड़ान</div><div class="chapter-author">पाठांश</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=जननायक कर्पूरी ठाकुर" class="chapter-card"><div class="chapter-number">19</div><div class="chapter-title">जननायक कर्पूरी ठाकुर</div><div class="chapter-author">पाठाधारित / संकलित</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=झाँसी की रानी" class="chapter-card"><div class="chapter-number">20</div><div class="chapter-title">झाँसी की रानी</div><div class="chapter-author">सुभद्रा कुमारी चौहान</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=चिकित्सा का चक्कर" class="chapter-card"><div class="chapter-number">21</div><div class="chapter-title">चिकित्सा का चक्कर</div><div class="chapter-author">बेढब बनारसी</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=सुदामा चरित" class="chapter-card"><div class="chapter-number">22</div><div class="chapter-title">सुदामा चरित</div><div class="chapter-author">नरोत्तमदास</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Non-Hindi&chapter=राह भटके हिरन के बच्चे को" class="chapter-card"><div class="chapter-number">23</div><div class="chapter-title">राह भटके हिरन के बच्चे को</div><div class="chapter-author">डॉ. नी वियतनाम</div><div class="chapter-arrow">→</div></a>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

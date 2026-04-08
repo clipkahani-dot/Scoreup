@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science (Class 10) - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sub-heading {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1.25rem;
+            padding: 0.7rem 1.1rem;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+        }
+        .sub-heading .icon {
+            font-size: 1.3rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        .chapter-container {
+            margin-bottom: 3.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search for chapters, questions..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+    <main class="page-container slide-up" style="max-width: 1100px; margin: 0 auto;">
+        <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-light); font-weight: 500;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt; <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt; <span>Science</span>
+        </div>
+        <div class="page-header" style="text-align: left; margin-bottom: 0.5rem;">
+            <h2>विज्ञान (Science)</h2>
+            <p>Class 10 Bihar Board — विषय चुनें</p>
+        </div>
+
+        <!-- 1. भौतिकी (Physics) -->
+        <div class="sub-heading">
+            <span class="icon">🧲</span>
+            <span>1. भौतिकी (Physics)</span>
+        </div>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Science&chapter=प्रकाश - परावर्तन तथा अपवर्तन" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">प्रकाश - परावर्तन तथा अपवर्तन</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=मानव नेत्र तथा रंगबिरंगा संसार" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">मानव नेत्र तथा रंगबिरंगा संसार</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=विद्युत" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">विद्युत</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=विद्युत धारा के चुंबकीय प्रभाव" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">विद्युत धारा के चुंबकीय प्रभाव</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=ऊर्जा के स्रोत" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">ऊर्जा के स्रोत</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- 2. रसायन शास्त्र (Chemistry) -->
+        <div class="sub-heading">
+            <span class="icon">🧪</span>
+            <span>2. रसायन शास्त्र (Chemistry)</span>
+        </div>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Science&chapter=रासायनिक अभिक्रियाएँ एवं समीकरण" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">रासायनिक अभिक्रियाएँ एवं समीकरण</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=अम्ल, क्षारक एवं लवण" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">अम्ल, क्षारक एवं लवण</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=धातु एवं अधातु" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">धातु एवं अधातु</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=कार्बन एवं उसके यौगिक" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">कार्बन एवं उसके यौगिक</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=तत्वों का आवर्त वर्गीकरण" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">तत्वों का आवर्त वर्गीकरण</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- 3. जीव विज्ञान (Biology) -->
+        <div class="sub-heading">
+            <span class="icon">🧬</span>
+            <span>3. जीव विज्ञान (Biology)</span>
+        </div>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Science&chapter=जैव प्रक्रम" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title">जैव प्रक्रम</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=नियंत्रण एवं समन्वय" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title">नियंत्रण एवं समन्वय</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=जीव जनन कैसे करते हैं?" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title">जीव जनन कैसे करते हैं?</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=आनुवंशिकता एवं जैव विकास" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title">आनुवंशिकता एवं जैव विकास</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=हमारा पर्यावरण" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title">हमारा पर्यावरण</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Science&chapter=प्राकृतिक संसाधनों का प्रबंधन" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title">प्राकृतिक संसाधनों का प्रबंधन</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+    </main>
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

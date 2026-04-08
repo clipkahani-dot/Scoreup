@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urdu (Class 10) - ScoreUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .urdu-text { font-family: 'Noto Nastaliq Urdu', serif; line-height: 1.8; }
+        .section-title {
+            font-size: 1.5rem; font-weight: 800; color: #0f172a;
+            margin: 3.5rem 0 1.5rem; padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 0 12px 12px 0;
+            display: block;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+        .section-desc { color: var(--text-light); margin-top: -1rem; margin-bottom: 1.5rem; margin-left: 1.25rem; font-size: 0.95rem; font-weight: 500; }
+        
+        .chapter-author {
+            font-family: 'Kalam', cursive;
+            font-size: 0.9rem;
+            color: #7c3aed;
+            background: #f5f3ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: 1rem;
+            border: 1px dashed #c4b5fd;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        .chapter-card:hover .chapter-author {
+            background: #7c3aed;
+            color: white;
+            border-style: solid;
+            transform: scale(1.05);
+        }
+        .chapter-title.urdu-text { font-size: 1.3rem; margin-top: 5px; }
+
+        @media (max-width: 600px) {
+            .chapter-card { flex-wrap: wrap; }
+            .chapter-author { margin-left: 54px; margin-top: 0.5rem; margin-right: 0; width: fit-content; }
+            .chapter-arrow { margin-left: auto; }
+        }
+    </style>
+</head>
+<body class="fade-in class-page-body">
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">ScoreUp</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="उर्दू या हिन्दी में खोजें..." autocomplete="off">
+                <button type="button" class="clear-btn" id="searchClear" style="display:none;">✕</button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown" style="display:none;"></div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html" class="active">Class 10</a>
+            <a href="class12.html">Class 12</a>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </header>
+    <main class="page-container slide-up" style="max-width: 1000px; margin: 0 auto;">
+        <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-light); font-weight: 500;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> &gt; <a href="class10.html" style="color: var(--primary-color); text-decoration: none;">Class 10</a> &gt; <span>Urdu</span>
+        </div>
+        <div class="page-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2 class="urdu-text">اردو (درخشاں حصہ-2)</h2>
+            <p>Class 10 Bihar Board Urdu Chapters</p>
+        </div>
+
+        <!-- Prose Section -->
+        <h3 class="section-title">किताब 1: दरख्शां (हिस्सा-2) - गद्य खण्ड (Nasir)</h3>
+        <p class="section-desc">Bihar Board Class 10 Urdu Prose Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Urdu&chapter=हम्द" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title urdu-text">حمد: خداِ عزّ وجل</div><div class="chapter-author urdu-text">شبنم کمالی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=भाभी जान" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title urdu-text">بھابھی جان</div><div class="chapter-author urdu-text">سہیل عظیم آبادی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=फरार" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title urdu-text">فرار</div><div class="chapter-author urdu-text">سید محمد محسن</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=कटी हुई शाख" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title urdu-text">کٹی ہوئی شاخ</div><div class="chapter-author urdu-text">قمر جہاں</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=आशियाना" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title urdu-text">آشیانہ</div><div class="chapter-author urdu-text">نگار عظیم</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=रिया" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title urdu-text">ریا</div><div class="chapter-author urdu-text">سر سید احمد خاں</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=अदब की पहचान" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title urdu-text">ادب کی پہچان</div><div class="chapter-author urdu-text">ڈاکٹر عبد المغنی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=उर्दू ड्रामा और आगा हश्र" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title urdu-text">اردو ڈرامہ اور آغا حشر</div><div class="chapter-author urdu-text">لطف الرحمن</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=आर्यभट्ट और तरेगना" class="chapter-card"><div class="chapter-number">9</div><div class="chapter-title urdu-text">آریہ بھٹ اور تریگنا</div><div class="chapter-author urdu-text">ماخوذ</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ालिब के खुतूत" class="chapter-card"><div class="chapter-number">10</div><div class="chapter-title urdu-text">غالب کے خطوط</div><div class="chapter-author urdu-text">مرزا غالب</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=शहबाज़ के खुतूत" class="chapter-card"><div class="chapter-number">11</div><div class="chapter-title urdu-text">شہباز کے خطوط</div><div class="chapter-author urdu-text">عبد الغفور شہباز</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=मेहदी अफ़ादी के खुतूत" class="chapter-card"><div class="chapter-number">12</div><div class="chapter-title urdu-text">مہدی افادی کے خطوط</div><div class="chapter-author urdu-text">مہدی افادی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=बेदी से इंटरव्यू" class="chapter-card"><div class="chapter-number">13</div><div class="chapter-title urdu-text">بیدی سے انٹرویو</div><div class="chapter-author urdu-text">عصمت چغتائی</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Poetry Section -->
+        <h3 class="section-title">किताब 1: दरख्शां (हिस्सा-2) - काव्य खण्ड (Nazm)</h3>
+        <p class="section-desc">Bihar Board Class 10 Urdu Poetry Chapters</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Urdu&chapter=मनाज़िरे फितरत" class="chapter-card"><div class="chapter-number">14</div><div class="chapter-title urdu-text">مناظرِ فطرت</div><div class="chapter-author urdu-text">پنڈت برج نارائن چکبست</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=इंडिया गेट" class="chapter-card"><div class="chapter-number">15</div><div class="chapter-title urdu-text">انڈیا گیٹ</div><div class="chapter-author urdu-text">جگن ناتھ آزاد</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=हम नौजवाँ हैं" class="chapter-card"><div class="chapter-number">16</div><div class="chapter-title urdu-text">ہم نوجواں ہیں</div><div class="chapter-author urdu-text">پرویز شاہدی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=बिजली का खंभा" class="chapter-card"><div class="chapter-number">17</div><div class="chapter-title urdu-text">بجلی کا کھمبہ</div><div class="chapter-author urdu-text">ندا فاضلی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=खड़ा डिनर" class="chapter-card"><div class="chapter-number">18</div><div class="chapter-title urdu-text">کھڑا ڈنر</div><div class="chapter-author urdu-text">سید محمد جعفری</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=आरिफ की मौत पर" class="chapter-card"><div class="chapter-number">19</div><div class="chapter-title urdu-text">عارف کی موت پر</div><div class="chapter-author urdu-text">مرزا غالب</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ज़हरे इश्क़" class="chapter-card"><div class="chapter-number">20</div><div class="chapter-title urdu-text">زہرِ عشق</div><div class="chapter-author urdu-text">شوق لکھنوی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=गुलज़ारे नसीम" class="chapter-card"><div class="chapter-number">21</div><div class="chapter-title urdu-text">گلزارِ نسیم</div><div class="chapter-author urdu-text">دیا شنکر نسیم</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=जज़्बए इश्क़" class="chapter-card"><div class="chapter-number">22</div><div class="chapter-title urdu-text">جذبۂ عشق</div><div class="chapter-author urdu-text">غلام ہمدانی مصحفی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ज़ल - मुबारक" class="chapter-card"><div class="chapter-number">23</div><div class="chapter-title urdu-text">غزل: مبارک عظیم آبادی</div><div class="chapter-author urdu-text">مبارک عظیم آبادی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ज़ल - अहमद फ़राज़" class="chapter-card"><div class="chapter-number">24</div><div class="chapter-title urdu-text">غزل: احمد فراز</div><div class="chapter-author urdu-text">احمد فراز</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ज़ल - हसन नईम" class="chapter-card"><div class="chapter-number">25</div><div class="chapter-title urdu-text">غزل: حسن نعیم</div><div class="chapter-author urdu-text">حسن نعیم</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ज़ल - परवीन शाकिर" class="chapter-card"><div class="chapter-number">26</div><div class="chapter-title urdu-text">غزل: پروین شاکر</div><div class="chapter-author urdu-text">پروین شاکر</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=ग़ज़ल - इरफ़ान सिद्दीक़ी" class="chapter-card"><div class="chapter-number">27</div><div class="chapter-title urdu-text">غزل: عرفان صدیقی</div><div class="chapter-author urdu-text">عرفان صدیقی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=दोहा" class="chapter-card"><div class="chapter-number">28</div><div class="chapter-title urdu-text">دوہا</div><div class="chapter-author urdu-text">ظفر گورکھپوری</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=गीत" class="chapter-card"><div class="chapter-number">29</div><div class="chapter-title urdu-text">گیت</div><div class="chapter-author urdu-text">سلام مچھلی شہری</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <!-- Roshni Supplementary -->
+        <h3 class="section-title">किताब 2: रोशनी (हिसा-2) - कहानियाँ (Roshni Stories)</h3>
+        <p class="section-desc">Bihar Board Class 10 Urdu Supplementary Book Stories</p>
+        <div class="chapter-container">
+            <a href="chapter.html?subject=Urdu&chapter=सेकेंड हैंड" class="chapter-card"><div class="chapter-number">1</div><div class="chapter-title urdu-text">سیکنڈ ہینڈ</div><div class="chapter-author urdu-text">ویکم محمد بشیر</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=खाली सन्दूक" class="chapter-card"><div class="chapter-number">2</div><div class="chapter-title urdu-text">خالی صندوق</div><div class="chapter-author urdu-text">اندرا گوسوامی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=वात्रुक के किनारे" class="chapter-card"><div class="chapter-number">3</div><div class="chapter-title urdu-text">واترک کے کنارے</div><div class="chapter-author urdu-text">پنا لال پٹیل</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=सूरज का घोड़ा" class="chapter-card"><div class="chapter-number">4</div><div class="chapter-title urdu-text">سورج کا گھوڑا</div><div class="chapter-author urdu-text">یو۔ آر۔ اننت مورتی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=अर्जुन" class="chapter-card"><div class="chapter-number">5</div><div class="chapter-title urdu-text">ارجن</div><div class="chapter-author urdu-text">مہا شویتا دیوی</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=अंग्रेज़िया बाबू" class="chapter-card"><div class="chapter-number">6</div><div class="chapter-title urdu-text">انگریزیا بابو</div><div class="chapter-author urdu-text">ہری موہن جھا</div><div class="chapter-arrow">→</div></a>
+        </div>
+
+        <h3 class="section-title">किताब 2: रोशनी (हिसा-2) - नज़्में (Roshni Poems)</h3>
+        <p class="section-desc">Bihar Board Class 10 Urdu Supplementary Book Poems</p>
+        <div class="chapter-container" style="margin-bottom: 5rem;">
+            <a href="chapter.html?subject=Urdu&chapter=बारिश की एक सुबह" class="chapter-card"><div class="chapter-number">7</div><div class="chapter-title urdu-text">بارش کی ایک صبح</div><div class="chapter-author urdu-text">سیتا کانت مہاپاتر</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=इंसान" class="chapter-card"><div class="chapter-number">8</div><div class="chapter-title urdu-text">انسان</div><div class="chapter-author urdu-text">تیلگو نظم</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=वह मुलाकात" class="chapter-card"><div class="chapter-number">9</div><div class="chapter-title urdu-text">وہ ملاقات</div><div class="chapter-author urdu-text">کے۔ سچیدانندن</div><div class="chapter-arrow">→</div></a>
+            <a href="chapter.html?subject=Urdu&chapter=दिए" class="chapter-card"><div class="chapter-number">10</div><div class="chapter-title urdu-text">دیے</div><div class="chapter-author urdu-text">امرتا پریتم</div><div class="chapter-arrow">→</div></a>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 4rem;">
+        <p>&copy; 2026 ScoreUp Learning Platform.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
